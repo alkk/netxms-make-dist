@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ca-certificates build-essential libtool autoconf automake git flex bison && \
+    apt-get install -y --no-install-recommends ca-certificates build-essential make libtool autoconf automake git flex bison python3 && \
     apt-get clean
 
 ADD build.sh /

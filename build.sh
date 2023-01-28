@@ -19,7 +19,7 @@ git clone https://github.com/netxms/netxms.git netxms
 cd netxms
 git checkout $TARGET
 
-./reconf
+build/prepare_release_build.sh
 ./configure --with-dist
 make dist
 

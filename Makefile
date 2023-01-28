@@ -1,8 +1,8 @@
-.PHONY: all build clean
+.PHONY: all build_local build_and_push clean
 
 REVISION ?= master
 
-IMAGE_REVISION = 1.0
+IMAGE_REVISION = 1.1
 
 all: build_local
 	docker run --rm -v $(PWD)/dist:/dist netxms-make-dist:$(IMAGE_REVISION) $(REVISION)
