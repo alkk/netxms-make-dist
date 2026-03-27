@@ -28,3 +28,14 @@ echo '### ALL DONE ###'
 echo
 echo Copying netxms-*.tar.gz to /dist/
 cp -v netxms-*.tar.gz /dist/
+
+TARBALL=$(ls netxms-*.tar.gz)
+VERSION=$(echo "$TARBALL" | sed 's/^netxms-//;s/\.tar\.gz$//')
+echo
+echo "VERSION=${VERSION}"
+echo "TARBALL=${TARBALL}"
+
+cat > /dist/build.env <<EOF
+VERSION=${VERSION}
+TARBALL=${TARBALL}
+EOF

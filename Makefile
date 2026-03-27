@@ -2,7 +2,7 @@
 
 REVISION ?= master
 
-IMAGE_REVISION = 1.1
+IMAGE_REVISION = 1.2
 
 all: build_local
 	docker run --rm -v $(PWD)/dist:/dist netxms-make-dist:$(IMAGE_REVISION) $(REVISION)
